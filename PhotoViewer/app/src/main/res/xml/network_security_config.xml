@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- 10.0.2.2(에뮬레이터에서 보는 로컬 PC) 등 http로 테스트할 때를 위한 설정.
+         PythonAnywhere 배포본은 https라 영향 없음 -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
