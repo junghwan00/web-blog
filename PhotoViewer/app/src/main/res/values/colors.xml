@@ -3,32 +3,32 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- Warm, natural photo-blog palette (light) -->
-    <color name="color_background">#FBF7F1</color>
+    <!-- Clean forest-green / cream palette (light) -->
+    <color name="color_background">#F6F4EC</color>
     <color name="color_surface">#FFFFFF</color>
-    <color name="color_primary">#A9603F</color>
-    <color name="color_primary_variant">#7C4530</color>
+    <color name="color_primary">#1E4433</color>
+    <color name="color_primary_variant">#163226</color>
     <color name="color_on_primary">#FFFFFF</color>
-    <color name="color_secondary">#5B6B4F</color>
-    <color name="color_on_secondary">#FFFFFF</color>
-    <color name="color_text_primary">#2B2622</color>
-    <color name="color_text_secondary">#8A8178</color>
-    <color name="color_divider">#ECE4DA</color>
-    <color name="color_chip_background">#F1E9DF</color>
-    <color name="color_card_stroke">#EEE4D8</color>
+    <color name="color_secondary">#DCEADC</color>
+    <color name="color_on_secondary">#1E4433</color>
+    <color name="color_text_primary">#232321</color>
+    <color name="color_text_secondary">#8C897F</color>
+    <color name="color_divider">#E7E3D6</color>
+    <color name="color_chip_background">#EFEDE2</color>
+    <color name="color_card_stroke">#00000000</color>
     <color name="color_error">#B3493A</color>
-    <color name="color_header_action_bg">#33FFFFFF</color>
+    <color name="color_header_action_bg">#DCEADC</color>
 
     <!-- Dark variant -->
-    <color name="color_background_dark">#1C1A17</color>
-    <color name="color_surface_dark">#262320</color>
-    <color name="color_primary_dark_variant">#E0A47F</color>
-    <color name="color_on_primary_dark">#3A2114</color>
-    <color name="color_secondary_dark">#A9C29A</color>
-    <color name="color_on_secondary_dark">#1C2816</color>
-    <color name="color_text_primary_dark">#EDE7DF</color>
-    <color name="color_text_secondary_dark">#B2A99E</color>
-    <color name="color_divider_dark">#39352F</color>
-    <color name="color_chip_background_dark">#332E27</color>
-    <color name="color_card_stroke_dark">#39352F</color>
+    <color name="color_background_dark">#15201A</color>
+    <color name="color_surface_dark">#1D2B23</color>
+    <color name="color_primary_dark_variant">#8FC9A9</color>
+    <color name="color_on_primary_dark">#0E1F17</color>
+    <color name="color_secondary_dark">#2C4536</color>
+    <color name="color_on_secondary_dark">#C9EAD4</color>
+    <color name="color_text_primary_dark">#EAF2EC</color>
+    <color name="color_text_secondary_dark">#A6B8AC</color>
+    <color name="color_divider_dark">#2C3A32</color>
+    <color name="color_chip_background_dark">#243128</color>
+    <color name="color_card_stroke_dark">#00000000</color>
 </resources>
