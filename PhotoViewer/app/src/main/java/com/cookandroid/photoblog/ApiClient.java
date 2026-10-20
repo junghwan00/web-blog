@@ -52,28 +52,28 @@ public final class ApiClient {
 
     // #14-1 검색/정렬/페이지네이션: search, ordering 파라미터를 붙여 첫 페이지를 요청하거나,
     // 서버가 돌려준 next 링크(nextPageUrl)를 그대로 다시 요청해 다음 페이지를 이어받는다.
+    // 순수 함수로 분리: 안드로이드 프레임워크 없이도 로컬 JUnit(app/src/test)에서 바로 테스트 가능.
+    public static String buildListUrl(String baseUrl, String search, String ordering) {
+        StringBuilder sb = new StringBuilder(listUrl(baseUrl));
+        List<String> params = new ArrayList<>();
+        try {
+            if (search != null && !search.isEmpty()) {
+                params.add("search=" + URLEncoder.encode(search, "UTF-8"));
+            }
+            if (ordering != null && !ordering.isEmpty()) {
+                params.add("ordering=" + URLEncoder.encode(ordering, "UTF-8"));
+            }
+        } catch (Exception ignored) {
+        }
+        if (!params.isEmpty()) {
+            sb.append("?").append(String.join("&", params));
+        }
+        return sb.toString();
+    }
+
     public static PageResult fetchPage(String baseUrl, String nextPageUrl, String search, String ordering) {
         PageResult result = new PageResult();
-        String urlStr;
-        if (nextPageUrl != null) {
-            urlStr = nextPageUrl;
-        } else {
-            StringBuilder sb = new StringBuilder(listUrl(baseUrl));
-            List<String> params = new ArrayList<>();
-            try {
-                if (search != null && !search.isEmpty()) {
-                    params.add("search=" + URLEncoder.encode(search, "UTF-8"));
-                }
-                if (ordering != null && !ordering.isEmpty()) {
-                    params.add("ordering=" + URLEncoder.encode(ordering, "UTF-8"));
-                }
-            } catch (Exception ignored) {
-            }
-            if (!params.isEmpty()) {
-                sb.append("?").append(String.join("&", params));
-            }
-            urlStr = sb.toString();
-        }
+        String urlStr = (nextPageUrl != null) ? nextPageUrl : buildListUrl(baseUrl, search, ordering);
 
         HttpURLConnection connection = null;
         try {
