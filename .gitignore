@@ -14,3 +14,7 @@ PhotoBlogServer/venv/
 PhotoBlogServer/db.sqlite3
 PhotoBlogServer/media/images/2026/
 PhotoBlogServer/server.log
+
+# macOS
+.DS_Store
+**/.DS_Store
